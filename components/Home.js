@@ -1,18 +1,21 @@
 import styles from '../styles/Home.module.css';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe, faMobileScreen, faDesktop } from '@fortawesome/free-solid-svg-icons';
 
 export default function Home() {
   return (
-    <main className='bg-slate-200'>
-      <Navbar />
       <div className="container mx-auto px-4">
-        <h1 className="text-4xl text-center m-5">
-          Sandrine Fialon<br/>
-          Développeur Web et Applications Mobiles
-        </h1>
+        <div className='flex flex-row justify-center items-center mt-5'>
+          <Image src={ require=('/s-fialon.jpg') } alt="S. Fialon" width="115" height="100"
+          className='rounded-full' />
+          <h1 className="text-4xl text-left m-5">
+            Sandrine Fialon<br/>
+            Développeur Web et Applications Mobiles
+          </h1>
+        </div>
         <div className='text-center m-5'>
           <p>Vous voulez renforcer vos équipes pour créer ou mettre à jour un site internet ou une application mobile ?</p>
           <p>Voici les outils et langages de programmation que j'utilise.</p>
@@ -20,7 +23,7 @@ export default function Home() {
         </div>
 
         <div className='flex flex-row justify-center items-stretch'>
-          <div className='shadow-lg rounded-lg m-5 bg-slate-300'>
+          <div className='shadow-lg rounded-lg m-5 bg-slate-200'>
             <div className='p-5 bg-slate-100 text-3xl'>
               <h2><FontAwesomeIcon icon={ faDesktop } size="xs" /> Sites internet</h2>
             </div>
@@ -59,7 +62,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className='shadow-lg rounded-lg m-5 bg-slate-300'>
+          <div className='shadow-lg rounded-lg m-5 bg-slate-200'>
             <div className='p-5 bg-slate-100 text-3xl'>
               <h2><FontAwesomeIcon icon={ faMobileScreen } size="xs" /> Applications mobiles</h2>
             </div>
@@ -85,7 +88,7 @@ export default function Home() {
               </ul>
             </div>
           </div>
-          <div className='shadow-lg rounded-lg m-5 bg-slate-300'>
+          <div className='shadow-lg rounded-lg m-5 bg-slate-200'>
             <div className='p-5 bg-slate-100 text-3xl'>
               <h2><FontAwesomeIcon icon={ faGlobe } size="xs" /> Outils du Web</h2>
             </div>
@@ -124,7 +127,5 @@ export default function Home() {
           </button>
         </div>
       </div>
-      <Footer />
-    </main>
   );
   }

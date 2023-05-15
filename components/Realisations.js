@@ -6,13 +6,9 @@ import { faGlobe, faMobileScreen, faDesktop } from '@fortawesome/free-solid-svg-
 
 export default function Realisations() {
   return (
-    <main className={styles.main}>
-      <Navbar />
-      <div className='bg-slate-200'>
+      <div className=''>
        
       </div>
-      <Footer />
-    </main>
   );
 }
 
