@@ -12,9 +12,9 @@ function App({ Component, pageProps }) {
         <title>Freelance - développeur web - application mobile</title>
       </Head>
       
-      <main className='bg-slate-200'>
+      <main className='bg-white '>
         <Navbar />
-        <Component {...pageProps} />
+          <Component {...pageProps} />
         <Footer/>
       </main>
     </>

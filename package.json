@@ -6,19 +6,29 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "preview-email": "email dev"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@react-email/container": "^0.0.8",
+    "@react-email/html": "^0.0.4",
+    "@react-email/section": "^0.0.9",
+    "@react-email/text": "^0.0.5",
     "autoprefixer": "^10.4.14",
+    "axios": "^1.4.0",
     "bootstrap": "^5.2.3",
+    "daisyui": "^2.51.6",
     "next": "12.1.6",
+    "nodemailer": "^6.9.2",
     "postcss": "^8.4.23",
     "react": "18.1.0",
     "react-bootstrap": "^2.7.4",
-    "react-dom": "18.1.0"
+    "react-dom": "18.1.0",
+    "react-email": "^1.9.3",
+    "react-hook-form": "^7.43.9"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.16.4",
