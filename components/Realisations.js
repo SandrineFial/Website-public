@@ -126,7 +126,7 @@ export default function Realisations() {
                 <img src="/infographie/flyer-asian.jpg" alt="Flyer Asian store" className="h-64 shadow-xl mb-4"/>
                 <img src="/infographie/flyer-boulanger.jpg" alt="Flyer Boulangerie"  className="h-64 shadow-xl mb-4"/>
                 <img src="/infographie/flyer-boutique.jpg" alt="Flyer Boutique"  className="h-64 shadow-xl mb-4"/>
-                <img src="/infographie/flyer-stage-ete.jpg" alt="Stage sport été" className="h-64 shadow-xl mb-4"/>
+                <img src="/infographie/flyer-EHPAD-var.jpg" alt="Sport sante" className="h-64 shadow-xl mb-4"/>
                 <img src="/infographie/affiche-ordi.jpg" alt="Affiche ordi" className="h-64 shadow-xl mb-4"/>
                 <img src="/infographie/affiche-maintenance.jpg" alt="Affiche maintenance"  className=" h-64 shadow-xl mb-4"/>
                 <img src="/infographie/affiche-pc.jpg" alt="Affiche PC"  className="h-64 shadow-xl mb-4"/>
