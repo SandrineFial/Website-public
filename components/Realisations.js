@@ -17,7 +17,27 @@ export default function Realisations() {
       <div className='divide-y'>
           <div className='my-10'>
             <h2 className='py-5 font-bold text-2xl'>Web</h2>
-            <div className='flex md:flex-row flex-col md:space-x-5 justify-center items-center'>
+            <div className='flex md:flex-row flex-col md:space-x-5 justify-center md:flex-wrap items-center'>
+
+            
+              <div className="card md:w-96 bg-base-100 shadow-xl my-5">
+                  <figure>
+                    <div className="mockup-window border bg-base-300">
+                      <div className="flex justify-center bg-base-200">                    
+                        <img src="/site-briefcreativ.png" alt="BriefCreativ" />
+                      </div>
+                    </div>  
+                  </figure>
+                  <div className="card-body">
+                    <div className=''>
+                      <h2 className="card-title">ReactJS Tailwind</h2>
+                      <p>Génération des routes en BackEnd. Framework DaisyUi.</p>
+                    </div> {/*}
+                    <div className="card-actions justify-end">
+                      <figure><img src="/site-entrainement.webp" alt="Entrainement" className='h-24 w-24' /></figure>
+                    </div> */}
+                  </div>
+                </div>
 
                 <div className="card md:w-96 bg-base-100 shadow-xl my-5">
                   <figure>
@@ -29,8 +49,8 @@ export default function Realisations() {
                   </figure>
                   <div className="card-body">
                     <div className=''>
-                      <h2 className="card-title">BackEnd - FrontEnd</h2>
-                      <p>Site de gestion d'entrainement, de statistiques. Codé avec php, javascript et bootstrap.</p>
+                      <h2 className="card-title">CodeIgniter framework PHP</h2>
+                      <p>Site de gestion d'entrainement, de statistiques. Effets Jquery et CSS avec bootstrap.</p>
                     </div> {/*}
                     <div className="card-actions justify-end">
                       <figure><img src="/site-entrainement.webp" alt="Entrainement" className='h-24 w-24' /></figure>
@@ -48,8 +68,8 @@ export default function Realisations() {
                   </figure>
                   <div className="card-body">
                     <div className=''>
-                      <h2 className="card-title">FullStack : FrontEnd + BackEnd</h2>
-                      <p>Site développé avec le framework php Symfony.</p>
+                      <h2 className="card-title">Symfony</h2>
+                      <p>Site développé en PHP avec récupération des données SQL. Intégration de maquette html.</p>
                     </div> {/*
                     <div className="card-actions justify-end">
                       <figure><img src="/site-immobilier.webp" alt="Immobilier" className='h-24 w-24' /></figure>
@@ -87,8 +107,8 @@ export default function Realisations() {
                   </figure>
                   <div className="card-body flex flex-row">
                     <div className=''>
-                      <h2 className="card-title">Site multilangues</h2>
-                      <p>Site de réservation en lien avec Booking. SEO multilangues. Créé avec Symfony.</p>
+                      <h2 className="card-title">Symfony multilangues</h2>
+                      <p>Site de réservation en lien avec Booking. SEO multilangues.</p>
                     </div> {/*}
                     <div className="card-actions justify-end">
                       <figure><img src="/site-monacohotel.webp" alt="MonacoHotel" className='h-24 w-24' /></figure>
