@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import styles from '../styles/Home.module.css';
 import Image from 'next/image';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from 'react-hook-form';
+import { Helmet } from "react-helmet";
+//var SibApiV3Sdk = require('sib-api-v3-sdk');
 /*
 import axios from 'axios';
 //import type { NextApiRequest, NextApiResponse } from "next";
@@ -15,19 +16,42 @@ import { sendEmail } from "../lib/email";
 
 export default function Contact() {
   
-  const [form, setForm] = useState({ nomMsg: '', mailMsg: '', textMsg: '' });
+  const [ form, setForm ] = useState({ nomMsg: '', mailMsg: '', textMsg: '' });
   const [ nomMsg, setnomMsg ] = useState("");
   const [ mailMsg, setmailMsg ] = useState("");
   const [ textMsg, settextMsg ] = useState("");
+  const API_KEY = "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";
   
+  const metaDescription = "Vous souhaitez renforcez votre équipe pour la création et mise à jour de vos sites internet, ainsi que de vos applications web et mobiles ? Un devis ou d'autres informations, je me ferais un plaisir de vous répondre."
+ 
   const envoiMail = async (e) => {
     if(nomMsg!=="" && mailMsg !=="" && textMsg!=="") {
-/*
-      var SibApiV3Sdk = require('sib-api-v3-sdk');
+      /*
+      var defaultClient = SibApiV3Sdk.ApiClient.instance;
+
+      // Configure API key authorization: api-key
+      var apiKey = defaultClient.authentications['api-key'];
+      apiKey.apiKey = API_KEY
+      // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+      //apiKey.apiKeyPrefix['api-key'] = "Token"
+
+      // Configure API key authorization: partner-key
+      var partnerKey = defaultClient.authentications['partner-key'];
+      partnerKey.apiKey = API_KEY
+      // Uncomment the following line to set a prefix for the API key, e.g. "Token" (defaults to null)
+      //partnerKey.apiKeyPrefix['partner-key'] = "Token"
+
+      var api = new SibApiV3Sdk.AccountApi()
+      api.getAccount().then(function(data) {
+        console.log('API called successfully. Returned data: ' + data);
+      }, function(error) {
+        console.error(error);
+      }); */
+      /*
       var defaultClient = SibApiV3Sdk.ApiClient.instance;
       
       var apiKey = defaultClient.authentications['api-key'];
-      apiKey.apiKey = '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';
+      apiKey.apiKey = API_KEY;
       var apiInstance = new SibApiV3Sdk.EmailCampaignsApi();
       var emailCampaigns = new SibApiV3Sdk.CreateEmailCampaign();
             
@@ -44,9 +68,7 @@ export default function Contact() {
       }, function(error) {
       console.error(error);
       });
-
-      
-      */
+*/
     } else {
 
     }
@@ -103,6 +125,17 @@ export default function Contact() {
   }
 
   return (
+    <div>
+
+      <Helmet>
+        <title>Contact - Freelance - développeur web - application mobile</title>
+        <link rel="canonical" href="https://fialons-web.fr/contact" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Contacter développeur Freelance" key="Contact Freelance" />
+        <meta property="og:description" content={metaDescription}/>
+        <meta name="description" content={metaDescription}/>
+      </Helmet>
+
       <div className='md:w-3/4 mx-auto'>
        <div className='flex flex-col md:flex-row justify-center items-center my-10 mx-10'>
           <Image src={ require=('/s-fialon.jpg') } alt="S. Fialon" width="115" height="110"
@@ -145,5 +178,6 @@ export default function Contact() {
             </div>
           </form>
       </div>
+    </div>
   );
 }

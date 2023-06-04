@@ -1,17 +1,19 @@
-import 'tailwindcss/tailwind.css';
 import styles from '../styles/globals.css';
+import React from "react";
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-import { Nav } from 'react-bootstrap';
 
 function App({ Component, pageProps }) {
+
+  const metaDescription = "Développeur Sénior Freelance, je vous propose la création et mise à jour de vos sites internet, ainsi que de vos applications web et mobiles."
   return (
     <>
-      <Head>
-        <title>Freelance - développeur web - application mobile</title>
-      </Head>
-      
+    <Head>
+        <meta charSet="utf-8" />
+        <link rel="icon" type="image/x-icon" href="/favicon.ico"/>
+        <meta name="robots" content="index, follow"/>
+    </Head>
       <main className='bg-white '>
         <Navbar />
           <Component {...pageProps} />

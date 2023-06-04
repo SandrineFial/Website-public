@@ -1,13 +1,23 @@
-import styles from '../styles/Home.module.css';
-import Footer from './Footer';
-import Navbar from './Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faRoad, faCertificate, faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { Helmet } from "react-helmet";
 
 export default function Parcours() {
+  const metaDescription = "Qui suis-je ? Découvrez mon parcours de développeur Full Stack Freelance en quelques mots."
+ 
   return (
     
     <div className=" mx-10 px-4 my-10">
+
+      <Helmet>
+        <title>Parcours - Freelance - développeur web et mobile</title>
+        <link rel="canonical" href="https://fialons-web.fr/parcours" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="CV - parcours développeur web Freelance" key="Parcours - CV - Freelance" />
+        <meta property="og:description" content={metaDescription}/>
+        <meta name="description" content={metaDescription}/>
+      </Helmet>
+
       <h1 className="text-4xl m-5">
         <FontAwesomeIcon icon={faRoad} size="xs" /> Parcours
       </h1>
@@ -17,10 +27,10 @@ export default function Parcours() {
         </div>
         <div className='flex flex-col md:flex-row justify-center items-stretch'>
           <div className='shadow-lg m-5 rounded-3xl rounded-tr-3xl bg-white'>
-            <div className='p-5 text-3xl bg-slate-100 rounded-tr-3xl rounded-bl-3xl rounded-tl-3xl rounded-b-none'>
+            <div className='p-5 text-3xl bg-sky-200 rounded-tr-3xl rounded-bl-3xl rounded-tl-3xl rounded-b-none'>
               <h2><FontAwesomeIcon icon={ faHandshake } size="xs" /> Expériences professionnelles</h2>
             </div>
-            <div className='bg-slate-100 rounded-b-3xl'>
+            <div className='bg-sky-200 rounded-b-3xl'>
               <div className='px-10 py-5 rounded-tr-3xl bg-white rounded-b-3xl'>
                 <h3 className='mb-2 card-title'>DÉVELOPPEUR WEB et INFOGRAPHISTE</h3>
                 <p className='italic mb-3'>2015 - 2019<br/>
@@ -39,10 +49,10 @@ export default function Parcours() {
           </div>
 
           <div className='shadow-lg m-5 rounded-3xl rounded-tr-3xl bg-white'>
-            <div className='p-5 text-3xl bg-slate-100 rounded-tr-3xl rounded-bl-3xl rounded-tl-3xl rounded-b-none'>
+            <div className='p-5 text-3xl bg-sky-200 rounded-tr-3xl rounded-bl-3xl rounded-tl-3xl rounded-b-none'>
               <h2><FontAwesomeIcon icon={ faCertificate } size="xs" /> Formations</h2>
             </div>
-            <div className='bg-slate-100 rounded-b-3xl'>
+            <div className=' bg-sky-200 rounded-b-3xl'>
               <div className='px-10 py-5 rounded-tr-3xl bg-white'>
                 <h3 className='mb-2 card-title'>RNCP 6 DÉVELOPPEUR WEB ET MOBILE</h3>
                 <p className='italic mb-3'>2023<br/>

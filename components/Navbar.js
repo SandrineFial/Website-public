@@ -6,7 +6,7 @@ import Image from 'next/image';
 
 function Navbar() {
   return (
-    <div className='bg-sky-600 py-5 bg-gradient-to-t from-sky-400 to-sky-600'>
+    <div className='bg-sky-500 py-5'>
       <div className="flex flex-row justify-center items-center">
         <ul className="menu menu-horizontal px-1">
           <li>
