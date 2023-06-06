@@ -6,7 +6,6 @@ import Footer from '../components/Footer';
 
 function App({ Component, pageProps }) {
 
-  const metaDescription = "Développeur Sénior Freelance, je vous propose la création et mise à jour de vos sites internet, ainsi que de vos applications web et mobiles."
   return (
     <>
     <Head>

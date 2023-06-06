@@ -3,32 +3,33 @@ import { faRoad, faCertificate, faHandshake } from '@fortawesome/free-solid-svg-
 import { Helmet } from "react-helmet";
 
 export default function Parcours() {
-  const metaDescription = "Qui suis-je ? Découvrez mon parcours de développeur Full Stack Freelance en quelques mots."
- 
+  const metaDescription = "Qui suis-je ? Découvrez mon parcours de développeur Full Stack Freelance en allant à l'essentiel.";
+  const metaTitle = "Parcours - CV - Freelance - développeur web et mobile";
+
   return (
     
     <div className=" mx-10 px-4 my-10">
 
       <Helmet>
-        <title>Parcours - Freelance - développeur web et mobile</title>
+        <title>{metaTitle}</title>
         <link rel="canonical" href="https://fialons-web.fr/parcours" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="CV - parcours développeur web Freelance" key="Parcours - CV - Freelance" />
+        <meta property="og:title" content={metaTitle} key="Parcours - CV - Freelance" />
         <meta property="og:description" content={metaDescription}/>
         <meta name="description" content={metaDescription}/>
       </Helmet>
 
-      <h1 className="text-4xl m-5">
-        <FontAwesomeIcon icon={faRoad} size="xs" /> Parcours
+      <h1 className="text-4xl my-5 flex">
+        <FontAwesomeIcon icon={faRoad} className='w-12 h-12 p-2 mr-2' /> Parcours
       </h1>
-        <div className='m-5'>
+        <div className='my-5'>
           <p>Développeur pendant près de 10 ans dans des boites d'informatique et agences Web, je suis depuis peu freelance dans ce domaine.
             <br/>Voici en quelques mots mon parcours professionnel.</p>
         </div>
         <div className='flex flex-col md:flex-row justify-center items-stretch'>
           <div className='shadow-lg m-5 rounded-3xl rounded-tr-3xl bg-white'>
             <div className='p-5 text-3xl bg-sky-200 rounded-tr-3xl rounded-bl-3xl rounded-tl-3xl rounded-b-none'>
-              <h2><FontAwesomeIcon icon={ faHandshake } size="xs" /> Expériences professionnelles</h2>
+              <h2 className='flex items-center'><FontAwesomeIcon icon={ faHandshake } className='w-12 h-12 p-2 mr-2' /> Expériences professionnelles</h2>
             </div>
             <div className='bg-sky-200 rounded-b-3xl'>
               <div className='px-10 py-5 rounded-tr-3xl bg-white rounded-b-3xl'>
@@ -50,7 +51,7 @@ export default function Parcours() {
 
           <div className='shadow-lg m-5 rounded-3xl rounded-tr-3xl bg-white'>
             <div className='p-5 text-3xl bg-sky-200 rounded-tr-3xl rounded-bl-3xl rounded-tl-3xl rounded-b-none'>
-              <h2><FontAwesomeIcon icon={ faCertificate } size="xs" /> Formations</h2>
+              <h2 className='flex items-center'><FontAwesomeIcon icon={ faCertificate } className='w-12 h-12 p-2 mr-2' /> Formations</h2>
             </div>
             <div className=' bg-sky-200 rounded-b-3xl'>
               <div className='px-10 py-5 rounded-tr-3xl bg-white'>

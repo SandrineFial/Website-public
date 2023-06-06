@@ -1,19 +1,18 @@
-import styles from '../styles/Home.module.css';
-import Footer from './Footer';
-import Navbar from './Navbar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faImage } from '@fortawesome/free-solid-svg-icons';
+import { faImage, faCircleUp } from '@fortawesome/free-solid-svg-icons';
 import Image from 'next/image';
 import { Helmet } from "react-helmet";
+import ScrollToTop from "react-scroll-to-top";
 
 export default function Realisations() {
 
-  const metaDescription = "Voici les sites web, les applications web et mobiles que j'ai réalisé avec différents langages de programmation : PHP, Javascript Css. Avec les Frawmeword React JS ou alos Symfony."
- 
+  const metaDescription = "Voici les sites web, les applications web et mobiles que j'ai réalisé avec différents langages de programmation : PHP, Javascript Css. Avec les Frawmeword React JS ou alos Symfony.";
+  const metaTitle = "Réalisations : sites web, applications mobiles";
+
   const tabSites = [
     { "img": "/site-briefcreativ.png", "alt": "BriefCreativ", 
       "titre": "ReactJS Tailwind", "description":"Génération des routes en BackEnd. Framework DaisyUi." },
-      { "img": "/site-grand-prix.jpg", "alt": "Grad Prix de Monaco", 
+    { "img": "/site-grand-prix.jpg", "alt": "Grad Prix de Monaco", 
         "titre": "PHP", "description":"Site développé en PHP. Site Multilangues. Gestion de billeterie en ligne." },
     { "img": "/site-entrainement.webp", "alt": "Entrainement", 
       "titre": "CodeIgniter framework PHP", "description":"Site de gestion d'entrainement, de statistiques. Effets Jquery et CSS avec bootstrap." },
@@ -31,7 +30,7 @@ export default function Realisations() {
         <div className="card md:h-96 md:w-96 bg-base-100 border-1 border-slate-100 shadow-xl my-5 mockup-window border bg-base-100">
           <figure>
               <div className="flex justify-center bg-base-200">                    
-                <img src={data.img} alt={data.alt} className='transition duration-300 hover:scale-150 hover:-translate-y-1 object-cover'/>
+                <img src={data.img} alt={data.alt} className='transition duration-300 hover:scale-150 hover:-translate-y-1 h-48 w-96 object-contain'/>
               </div>
           </figure>
           <div className="card-body">
@@ -81,64 +80,67 @@ export default function Realisations() {
 
     <div>
       <Helmet>
-          <title>Réalisations : sites web, applications mobiles</title>
+          <title>{metaTitle}</title>
           <link rel="canonical" href="https://fialons-web.fr/realisations" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="Sites internet, Applications mobiles" key="Websites, applications" />
+          <meta property="og:title" content={metaTitle} key="Websites, applications" />
           <meta property="og:description" content={metaDescription}/>
           <meta name="description" content={metaDescription}/>
       </Helmet>
-    <div className=" mx-10 px-4 my-10">
-      <h1 className="text-4xl m-5">
-        <FontAwesomeIcon icon={faImage} size="xs" /> Réalisations
-      </h1>
-      <p>Vous trouvez ici quelques sites web que j'ai réalisés, utilisant différentes technologies.</p>
-      <p>Tous les sites que je créé respectent les normes W3C et sont Responsives, adaptables sur toutes les interfaces (mobiles, tablettes et ordinateurs).</p>
+      <div className=" mx-10 px-4 my-10">
+        <h1 className="text-4xl my-5 flex">
+          <FontAwesomeIcon icon={faImage} className='w-12 h-12 p-2 mr-2 ml-0'/>Réalisations
+        </h1>
+        <p>Vous trouvez ici quelques sites web que j'ai réalisés, utilisant différentes technologies.</p>
+        <p>Tous les sites que je créé respectent les normes W3C et sont Responsives, adaptables sur toutes les interfaces (mobiles, tablettes et ordinateurs).</p>
 
-      <div className='divide-y'>
-          <div className='my-10'>
-            <h2 className='py-5 font-bold text-2xl'>Web</h2>
-            <div className='flex md:flex-row flex-col md:space-x-5 justify-center md:flex-wrap items-center'>
+        <div className='divide-y'>
+            <div className='my-10'>
+              <h2 className='py-5 font-bold text-2xl'>Web</h2>
+              <div className='flex md:flex-row flex-col md:space-x-5 justify-center md:flex-wrap items-center'>
 
-              {sites}
-            
-            </div>
-          </div>
-
-          <div className='my-10'>
-            <h2 className='py-5 font-bold text-2xl'>Applications mobiles</h2>
-
-          <div className='flex md:flex-row flex-col md:space-x-5 justify-center items-center'>
-
-            <div className="card md:w-96 bg-base-100 shadow-xl my-5">
-              <figure className='bg-slate-200'><img src="/appli-generateur-seance.jpg" alt="Appli mobile" /></figure>
-              <div className="card-body">
-                <div className=''>
-                  <h2 className="card-title">Générateur de séances</h2>
-                  <p>Application mobile en cours de développement avec React Native.</p>
-                </div> 
-                
+                {sites}
+              
               </div>
             </div>
-          </div>
+
+            <div className='my-10'>
+              <h2 className='py-5 font-bold text-2xl'>Applications mobiles</h2>
+
+            <div className='flex md:flex-row flex-col md:space-x-5 justify-center items-center'>
+
+              <div className="card md:w-96 md:h-96 bg-base-100 shadow-xl my-5">
+                <figure className='bg-slate-200'>
+                  <img src="/appli-generateur-seance.jpg" alt="Appli mobile" className='transition duration-300 hover:scale-150 hover:-translate-y-1 h-60 w-96 object-contain' />
+                </figure>
+                <div className="card-body">
+                  <div className=''>
+                    <h2 className="card-title">Générateur de séances</h2>
+                    <p>Application mobile en cours de développement avec React Native.</p>
+                  </div> 
+                  
+                </div>
+              </div>
+            </div>
 
 
-          </div>
+            </div>
 
-          <div className='my-10'>
-            <h2 className='py-5 font-bold text-2xl'>Infographie, print</h2>
+            <div className='my-10'>
+              <h2 className='py-5 font-bold text-2xl'>Infographie, print</h2>
 
-            <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center p-4 space-x-4">
-              {imgFlyers}
-            </div>   
+              <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center p-4 space-x-4">
+                {imgFlyers}
+              </div>   
 
-            <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center p-4 space-x-4">
-                {imgCV}
-            </div>  
-          </div>
+              <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center p-4 space-x-4">
+                  {imgCV}
+              </div>  
+            </div>
+        </div>
+
       </div>
-
-    </div>
+      <ScrollToTop smooth component={ <FontAwesomeIcon icon={ faCircleUp }/> }  />
     </div>
   );
 }
