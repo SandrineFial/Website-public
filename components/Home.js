@@ -86,6 +86,7 @@ export default function Home() {
             <div className='bg-lime-400 rounded-b-3xl'>
               <div className='px-10 py-5 rounded-tr-3xl bg-white'>
                 <p>Androïd et Iphone</p>
+                <p className='bg-slate-100 pl-2 my-2'>Outils utilisés :</p>
                 <ul className='list-disc'>
                   <li className='mb-5 mt-5'><span className='font-bold'>Langage de programmation</span>
                     <ul>
@@ -94,7 +95,7 @@ export default function Home() {
                   </li>
                   <li className='mb-5'><span className='font-bold'>Mise en page</span>
                     <ul>
-                      <li><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> CSS (Talwindcss)</li>
+                      <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> CSS (Talwindcss)</li>
                     </ul>
                   </li>
                   <li className='mb-5'>
@@ -103,6 +104,15 @@ export default function Home() {
                       <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> MongoDB</li>
                     </ul>
                   </li>
+                </ul>
+                <p className='bg-slate-100 pl-2 mb-2'>Fonctionnalités :</p>
+                <ul>
+                  <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> Photo / vidéo</li>
+                  <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> Map et Géolocalisation</li>
+                  <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> Upload de fichiers</li>
+                  <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> Appel à des API</li>
+                  <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> Authentification sécurisée</li>
+                  <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> Déploiement avec Expo</li>
                 </ul>
               </div>
             </div>
@@ -124,10 +134,17 @@ export default function Home() {
                       <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> GITHub</li>
                     </ul>
                   </li>
-                  <li className='mb-5'><span className='font-bold'>Gestion de projet :</span>
+                  <li className='mb-5'><span className='font-bold'>Gestion de projet</span>
                     <ul>
                       <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> Miro</li>
                       <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> Asana</li>
+                    </ul>
+                  </li>
+                  <li className='mb-5'><span className='font-bold'>Design Sprint</span>
+                    <ul>
+                      <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> Miro</li>
+                      <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> Whimsical</li>
+                      <li className='flex items-center'><FontAwesomeIcon icon={faCheck} className="text-green-500 w-8 h-8 p-2" /> Figma</li>
                     </ul>
                   </li>
                   <li className='mb-5'><span className='font-bold'>Graphisme :</span>
