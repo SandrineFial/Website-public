@@ -5,6 +5,13 @@ import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import { useForm } from 'react-hook-form';
+/*
+import { ApiClient, Configuration, TransactionalEmailsApi } from 'sib-api-v3-sdk';
+const defaultClient = ApiClient.instance;
+const API_KEY = "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";
+defaultClient.authentications['api-key'].apiKey = API_KEY;
+const transactionalEmailsApi = new TransactionalEmailsApi();
+*/
 //import { TransactionalEmailsApi } from 'sib-api-v3-sdk';
 //const apiInstance = new TransactionalEmailsApi();
 //import SibApiV3Sdk from "sib-api-v3-sdk"; // NE MARCHE PAS
@@ -24,13 +31,24 @@ export default function Contact() {
   const [ nomMsg, setnomMsg ] = useState("");
   const [ mailMsg, setmailMsg ] = useState("");
   const [ textMsg, settextMsg ] = useState("");
-  const API_KEY = "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";
   
   const metaDescription = "Vous souhaitez renforcez votre équipe pour la création et mise à jour de vos sites internet, ainsi que de vos applications web et mobiles ? Un devis ou d'autres informations, je me ferais un plaisir de vous répondre. Je suis disponible sur Marseille, Aix-en-Provence et communes limitrophes ainsi qu'à distance."
   const metaTitle = "Contact - Freelance - développeur web - application mobile";
 
   const envoiMail = async (e) => {
     if(nomMsg!=="" && mailMsg !=="" && textMsg!=="") {
+      /*
+      const sendSmtpEmail = {
+          to: [{ "email": "fialon.sandrine@gmail.com", "name": "To Name" }],
+          sender: { "email": "from@example.com", "name": "From Name" },
+          subject: "Subject of the message",
+          htmlContent: "<html><body><h1>Hi!</h1><p>Test email sent from React App using Sendinblue API.</p></body></html>"
+      };
+      transactionalEmailsApi.sendTransacEmail(sendSmtpEmail).then(function(data) {
+        console.log('API called successfully. Returned data: ' + JSON.stringify(data));
+    }, function(error) {
+        console.error(error);
+    });*/
 /*
       apiInstance.sendTransacEmail({
         "subject":"Test Subject",
@@ -190,6 +208,7 @@ export default function Contact() {
           <p>N'hésitez pas à me contacter pour un projet commun dans le web.<br/>
             Je ne manquerais pas de vous répondre.</p>
         </div>
+        {/*  
         <form onSubmit={ () => envoiMail }>
             <div className="p-5 mx-auto mb-10 rounded-lg container bg-slate-100 max-w-xs md:max-w-md">
                 <div className='mb-3 flex flex-col justify-center items-center'>
@@ -208,6 +227,7 @@ export default function Contact() {
                 </div>
             </div>
           </form>
+        */}
       </div>
       
   );

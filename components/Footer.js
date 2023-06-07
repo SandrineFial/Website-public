@@ -11,7 +11,9 @@ function Footer() {
       <div className="items-center grid-flow-col">
         
         <Link href="/">
-          <Image src="/logo.png" alt="Logo" width={70} height={50} className='md:block hidden' />
+          <div className='md:block hidden'>
+            <Image src="/logo.png" alt="Logo" width={70} height={50} />
+          </div>
         </Link>
         <p>Copyright © 2023 - S. Fialon</p>
       </div> 

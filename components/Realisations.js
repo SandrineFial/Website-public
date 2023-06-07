@@ -96,7 +96,7 @@ export default function Realisations() {
 
         <div className='divide-y'>
             <div className='my-10'>
-              <h2 className='py-5 font-bold text-2xl'>Web</h2>
+              <h2 className='py-5 font-bold text-2xl bg-slate-100 pl-2 border-1 border-slate-100 border-b-slate-600 rounded-t-lg'>Web</h2>
               <div className='flex md:flex-row flex-col md:space-x-5 justify-center md:flex-wrap items-center'>
 
                 {sites}
@@ -105,7 +105,7 @@ export default function Realisations() {
             </div>
 
             <div className='my-10'>
-              <h2 className='py-5 font-bold text-2xl'>Applications mobiles</h2>
+              <h2 className='py-5 font-bold text-2xl bg-slate-100 pl-2 border-1 border-slate-100 border-b-slate-600 rounded-t-lg'>Applications mobiles</h2>
 
             <div className='flex md:flex-row flex-col md:space-x-5 justify-center items-center'>
 
@@ -127,7 +127,7 @@ export default function Realisations() {
             </div>
 
             <div className='my-10'>
-              <h2 className='py-5 font-bold text-2xl'>Infographie, print</h2>
+              <h2 className='py-5 font-bold text-2xl bg-slate-100 pl-2 border-1 border-slate-100 border-b-slate-600 rounded-t-lg'>Infographie, print</h2>
 
               <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center p-4 space-x-4">
                 {imgFlyers}

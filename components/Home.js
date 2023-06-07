@@ -12,15 +12,14 @@ export default function Home() {
   return (
 
     <div className=" mx-10 px-4 my-10">
-      <Helmet>
-          <title>{metaTitle}</title>
-          <link rel="canonical" href="https://fialons-web.fr" />
-          <meta property="og:type" content="website" />
-          <meta property="og:title" content={metaTitle} key="Freelance" />
-          <meta property="og:description" content={metaDescription}/>
-          <meta name="description" content={metaDescription}/>
-      </Helmet> 
-      <div className=" mx-10 px-4 my-10">
+        <Helmet>
+            <title>{metaTitle}</title>
+            <link rel="canonical" href="https://fialons-web.fr" />
+            <meta property="og:type" content="website" />
+            <meta property="og:title" content={metaTitle} key="Freelance" />
+            <meta property="og:description" content={metaDescription}/>
+            <meta name="description" content={metaDescription}/>
+        </Helmet> 
         <div className='text-center flex flex-col justify-center items-center mt-5'>
           
           <h1 className="text-4xl text-center md:text-left mt-5 mb-10">
@@ -151,7 +150,7 @@ export default function Home() {
           </Link>
         </div>
         <p className='text-center'>Je suis disponible dans les Bouches-du-Rhône, essentiellement sur Marseille, Aix-en-Provence et communes limitrophes ainsi qu'à distance.</p>
-      </div>
+     
       <ScrollToTop smooth component={ <FontAwesomeIcon icon={ faCircleUp }/> }  />
     </div>
   );
