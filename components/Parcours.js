@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faRoad, faCertificate, faHandshake } from '@fortawesome/free-solid-svg-icons';
+import { faRoad, faCertificate, faHandshake, faLink, faBullseye } from '@fortawesome/free-solid-svg-icons';
 import { Helmet } from "react-helmet";
+import Link from 'next/link';
 
 export default function Parcours() {
   const metaDescription = "Qui suis-je ? Découvrez mon parcours de développeur Full Stack Freelance en allant à l'essentiel.";
@@ -70,6 +71,31 @@ export default function Parcours() {
             </div>
           </div>
        </div>
+
+       <div className='flex flex-col md:flex-row justify-center items-stretch'>
+          <div className='shadow-lg m-5 rounded-3xl rounded-tr-3xl bg-white'>
+            <div className='p-5 text-3xl bg-sky-200 rounded-tr-3xl rounded-bl-3xl rounded-tl-3xl rounded-b-none'>
+              <h2 className='flex items-center'><FontAwesomeIcon icon={ faBullseye } className='w-12 h-12 p-2 mr-2' /> Autres</h2>
+            </div>
+            <div className=' bg-sky-200 rounded-b-3xl'>
+              <div className='px-10 py-5 rounded-tr-3xl bg-white'>
+                <h3 className='mb-2 card-title'>DIPLOME D'ÉTAT et CQP Animateur Tir à l'Arc</h3>
+                <p className='italic mb-3'>2021<br/>
+                  FFTA (Fédération Française de Tir à l'arc)</p>
+                <p className='mb-5'>
+                  Entrainement en club et animations extra-fédérales.<br/>
+                  Formation des Entraineurs Fédéraux (<abbr title='Équipe Technique Régionale'>ETR</abbr> PACA).</p>
+                <p><Link href="https://boxdelarcher.fr" rel="noopener noreferrer" target='_blank'>
+                  <div className='flex items-center cursor-pointer hover:text-slate-400'>
+                    <FontAwesomeIcon icon={faLink} size="xs" className='md:text-lg text-2xl w-8 h-8 mr-2' /> Site web
+                  </div>
+                  </Link>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
 
       </div>
   );
