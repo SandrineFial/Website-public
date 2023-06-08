@@ -4,12 +4,12 @@ import React from "react";
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-
+/*
 import ReactGA from 'react-ga';
 const TRACKING_ID = "G-WPZ58PNGBF"; //"351786095"; //  // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
 ReactGA.pageview(window.location.pathname);
-
+*/
 function App({ Component, pageProps }) {
 
   return (
