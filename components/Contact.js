@@ -4,7 +4,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
-import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 
 const MAIL_REACT_APP_TEMPLATE_ID="template_mail_website";
@@ -17,6 +16,7 @@ export default function Contact() {
   const [ mailMsg, setmailMsg ] = useState("");
   const [ textMsg, settextMsg ] = useState("");
   const [ msgEnvoye, setMsgEnvoye ] = useState("");
+  const [ msgError, setMsgError ] = useState("");
   
   const metaDescription = "Vous souhaitez renforcez votre équipe pour la création et mise à jour de vos sites internet, ainsi que de vos applications web et mobiles ? Un devis ou d'autres informations, je me ferais un plaisir de vous répondre. Je suis disponible sur Marseille, Aix-en-Provence et communes limitrophes ainsi qu'à distance."
   const metaTitle = "Contact - Freelance - développeur web - application mobile";
@@ -30,7 +30,7 @@ export default function Contact() {
           user_email: mailMsg,
           message: textMsg
         };
-        console.log('Champs envoyé : FORM',form.current);
+        //console.log('Champs envoyé : FORM',form.current);
         emailjs.send( 
           MAIL_REACT_APP_SERVICE_ID, MAIL_REACT_APP_TEMPLATE_ID, templateParams, MAIL_REACT_APP_PUBLIC_KEY
         ).then( (result) => { 
@@ -41,7 +41,9 @@ export default function Contact() {
           setMsgEnvoye("Message envoyé. Merci");
         }, 
         (error) => { 
-            console.log("Non envoyé", error.text); }
+            console.log("Non envoyé", error.text); 
+            setMsgError("Problème technique. Message non envoyé !");
+          }
         ); 
 
     } else { }
@@ -88,6 +90,11 @@ export default function Contact() {
             Je ne manquerais pas de vous répondre.</p>
             { msgEnvoye !== "" ? 
               (<div className='bg-green-200 rounded-lg mt-4 p-2 mx-auto container max-w-xs md:max-w-md'>{msgEnvoye}</div>)
+              : ""
+            }
+            {
+              msgError !== "" ? 
+              (<div className='bg-red-200 rounded-lg mt-4 p-2 mx-auto container max-w-xs md:max-w-md'>{msgError}</div>)
               : ""
             }
         </div>

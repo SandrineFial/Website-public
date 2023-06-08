@@ -27,7 +27,8 @@ export default function Realisations() {
   const sites = tabSites.map(
     (data, k) => { 
       return ( 
-        <div className="card md:h-96 md:w-96 bg-base-100 border-1 border-slate-100 shadow-xl my-5 mockup-window border bg-base-100">
+        <div key={ "sites_"+k}
+          className="card md:h-96 md:w-96 bg-base-100 border-1 border-slate-100 shadow-xl my-5 mockup-window border bg-base-100">
           <figure>
               <div className="flex justify-center bg-base-200">                    
                 <img src={data.img} alt={data.alt} className='transition duration-300 hover:scale-150 hover:-translate-y-1 h-48 w-96 object-contain'/>
@@ -67,13 +68,13 @@ export default function Realisations() {
   const imgFlyers = tabImgFlyers.map(
     (data, k) => { 
       const lienImg = "/infographie/"+data.img;
-      return ( <img src={lienImg} alt={data.alt} className="h-64 shadow-xl mb-4 transition duration-300 hover:scale-150 hover:-translate-y-1"/> ) }
+      return ( <img key={ "flyers_"+k} src={lienImg} alt={data.alt} className="h-64 shadow-xl mb-4 transition duration-300 hover:scale-150 hover:-translate-y-1"/> ) }
   )
 
   const imgCV = tabImgCV.map(
     (data, k) => { 
       const lienImg = "/infographie/"+data.img;
-      return ( <img src={lienImg} alt={data.alt} className="h-40 shadow-xl mb-4 transition duration-300 hover:scale-125 hover:-translate-y-1"/> ) }
+      return ( <img key={ "cv_"+k} src={lienImg} alt={data.alt} className="h-40 shadow-xl mb-4 transition duration-300 hover:scale-125 hover:-translate-y-1"/> ) }
   )
 
   return (
