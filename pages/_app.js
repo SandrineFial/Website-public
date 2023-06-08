@@ -1,13 +1,14 @@
+require('dotenv').config();
 import styles from '../styles/globals.css';
 import React from "react";
 import Head from 'next/head';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
-/*
+
 import ReactGA from 'react-ga';
-const TRACKING_ID = "UA-XXXXX-X"; // OUR_TRACKING_ID
+const TRACKING_ID = "UA-351786095"; // G-WPZ58PNGBF // OUR_TRACKING_ID
 ReactGA.initialize(TRACKING_ID);
-*/
+
 function App({ Component, pageProps }) {
 
   return (

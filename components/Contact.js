@@ -7,57 +7,41 @@ import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-
 import { useForm } from 'react-hook-form';
 import emailjs from '@emailjs/browser';
 
-/*
-import { ApiClient, Configuration, TransactionalEmailsApi } from 'sib-api-v3-sdk';
-const defaultClient = ApiClient.instance;
-const API_KEY = "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";
-defaultClient.authentications['api-key'].apiKey = API_KEY;
-const transactionalEmailsApi = new TransactionalEmailsApi();
-*/
-//import { TransactionalEmailsApi } from 'sib-api-v3-sdk';
-//const apiInstance = new TransactionalEmailsApi();
-//import SibApiV3Sdk from "sib-api-v3-sdk"; // NE MARCHE PAS
-//var SibApiV3Sdk = require('sib-api-v3-sdk');
-/*
-import axios from 'axios';
-//import type { NextApiRequest, NextApiResponse } from "next";
-import { render } from "@react-email/render";
-import WelcomeTemplate from "../emails/WelcomeTemplate";
-import { sendEmail } from "../lib/email";
-// const nodemailer = require("nodemailer");
-*/
+const MAIL_REACT_APP_TEMPLATE_ID="template_mail_website";
+const MAIL_REACT_APP_SERVICE_ID="website_react-contact";
+const MAIL_REACT_APP_PUBLIC_KEY="apFfcvXqsGlvOjOSD";
 
 export default function Contact() {
-  
-  const [ form, setForm ] = useState({ nomMsg: '', mailMsg: '', textMsg: '' });
+  const form = useRef();
   const [ nomMsg, setnomMsg ] = useState("");
   const [ mailMsg, setmailMsg ] = useState("");
   const [ textMsg, settextMsg ] = useState("");
+  const [ msgEnvoye, setMsgEnvoye ] = useState("");
   
   const metaDescription = "Vous souhaitez renforcez votre équipe pour la création et mise à jour de vos sites internet, ainsi que de vos applications web et mobiles ? Un devis ou d'autres informations, je me ferais un plaisir de vous répondre. Je suis disponible sur Marseille, Aix-en-Provence et communes limitrophes ainsi qu'à distance."
   const metaTitle = "Contact - Freelance - développeur web - application mobile";
-
+ 
   const envoiMail = (e) => {
-    console.log('Coucou formulaire');
+    
     if(nomMsg!=="" && mailMsg !=="" && textMsg!=="") {
-      console.log('Champs non vide');
         e.preventDefault(); 
-        const templateParams = {
+        let templateParams = {
           user_name: nomMsg,
           user_email: mailMsg,
           message: textMsg
         };
-
-        emailjs .sendForm( 
-          process.env.REACT_APP_SERVICE_ID, 
-          process.env.REACT_APP_TEMPLATE_ID, 
-          templateParams, 
-          process.env.REACT_APP_PUBLIC_KEY ) 
-        .then( (result) => { 
-          console.log("Message envoyé...", result.text); 
+        console.log('Champs envoyé : FORM',form.current);
+        emailjs.send( 
+          MAIL_REACT_APP_SERVICE_ID, MAIL_REACT_APP_TEMPLATE_ID, templateParams, MAIL_REACT_APP_PUBLIC_KEY
+        ).then( (result) => { 
+          //console.log("Retour", result);
+          setnomMsg(""); 
+          setmailMsg(""); 
+          settextMsg("");
+          setMsgEnvoye("Message envoyé. Merci");
         }, 
         (error) => { 
-            console.log("Non envoyé", error.text); } 
+            console.log("Non envoyé", error.text); }
         ); 
 
     } else { }
@@ -102,9 +86,13 @@ export default function Contact() {
         et à distance.</p>
           <p>N'hésitez pas à me contacter pour un projet commun dans le web.<br/>
             Je ne manquerais pas de vous répondre.</p>
+            { msgEnvoye !== "" ? 
+              (<div className='bg-green-200 rounded-lg mt-4 p-2 mx-auto container max-w-xs md:max-w-md'>{msgEnvoye}</div>)
+              : ""
+            }
         </div>
         
-        <form onSubmit={envoiMail}>
+        <form ref={form} onSubmit={envoiMail}>
             <div className="p-5 mx-auto mb-10 rounded-lg container bg-slate-100 max-w-xs md:max-w-md">
                 <div className='mb-3 flex flex-col justify-center items-center'>
                   <input type="text" placeholder="Nom prénom" name='user_name'
@@ -117,7 +105,7 @@ export default function Contact() {
                   className="textarea textarea-bordered textarea-md w-full max-w-md mb-5"
                   onChange={(e) => settextMsg(e.target.value)} value={textMsg} required ></textarea>
                   <div>
-                    <button className="bg-sky-200 rounded-lg px-10 p-3 shadow hover:bg-sky-600 hover:text-white cursor-pointer flex justify-center items-center">
+                    <button type='submit' className="bg-sky-200 rounded-lg px-10 p-3 shadow hover:bg-sky-600 hover:text-white cursor-pointer flex justify-center items-center">
                       <span className='w-10 h-10'><FontAwesomeIcon icon={ faEnvelope} className='mr-2 text-xs' size='xs' /></span>
                      Envoyer
                     </button>
