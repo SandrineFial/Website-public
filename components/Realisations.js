@@ -106,28 +106,6 @@ export default function Realisations() {
             </div>
 
             <div className='my-10'>
-              <h2 className='py-5 font-bold text-2xl bg-slate-100 pl-2 border-1 border-slate-100 border-b-slate-600 rounded-t-lg'>Applications mobiles</h2>
-
-            <div className='flex md:flex-row flex-col md:space-x-5 justify-center items-center'>
-
-              <div className="card md:w-96 md:h-96 bg-base-100 shadow-xl my-5">
-                <figure className='bg-slate-200'>
-                  <img src="/appli-generateur-seance.jpg" alt="Appli mobile" className='transition duration-300 hover:scale-150 hover:-translate-y-1 h-60 w-96 object-contain' />
-                </figure>
-                <div className="card-body">
-                  <div className=''>
-                    <h2 className="card-title">Générateur de séances</h2>
-                    <p>Application mobile en cours de développement avec React Native.</p>
-                  </div> 
-                  
-                </div>
-              </div>
-            </div>
-
-
-            </div>
-
-            <div className='my-10'>
               <h2 className='py-5 font-bold text-2xl bg-slate-100 pl-2 border-1 border-slate-100 border-b-slate-600 rounded-t-lg'>Infographie, print</h2>
 
               <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center p-4 space-x-4">
@@ -137,6 +115,26 @@ export default function Realisations() {
               <div className="flex flex-col md:flex-row md:flex-wrap justify-center items-center p-4 space-x-4">
                   {imgCV}
               </div>  
+            </div>
+
+
+            <div className='my-10'>
+              <h2 className='py-5 font-bold text-2xl bg-slate-100 pl-2 border-1 border-slate-100 border-b-slate-600 rounded-t-lg'>Applications mobiles</h2>
+              <div className='flex md:flex-row flex-col md:space-x-5 justify-center items-center'>
+
+                <div className="card md:w-96 md:h-96 bg-base-100 shadow-xl my-5">
+                  <figure className='bg-slate-200'>
+                    <img src="/appli-generateur-seance.jpg" alt="Appli mobile" className='transition duration-300 hover:scale-150 hover:-translate-y-1 h-60 w-96 object-contain' />
+                  </figure>
+                  <div className="card-body">
+                    <div className=''>
+                      <h2 className="card-title">Générateur de séances</h2>
+                      <p>Application mobile en cours de développement avec React Native.</p>
+                    </div> 
+                    
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
 

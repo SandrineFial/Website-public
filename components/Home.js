@@ -159,13 +159,14 @@ export default function Home() {
             </div>
           </div>
         </div>
+        {/*
         <div className='flex flex-col items-center'>
           <Link href="/contact">
             <button className='rounded-full bg-slate-100 p-3 m-10 text-center'>
               Tarif journalier : 400 €
             </button>
           </Link>
-        </div>
+        </div> */}
         <p className='text-center'>Je suis disponible dans les Bouches-du-Rhône, essentiellement sur Marseille, Aix-en-Provence et communes limitrophes ainsi qu'à distance.</p>
      
       <ScrollToTop smooth component={ <FontAwesomeIcon icon={ faCircleUp }/> }  />

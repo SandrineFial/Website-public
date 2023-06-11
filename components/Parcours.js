@@ -24,8 +24,7 @@ export default function Parcours() {
         <FontAwesomeIcon icon={faRoad} className='w-12 h-12 p-2 mr-2' /> Parcours
       </h1>
         <div className='my-5'>
-          <p>Développeur pendant près de 10 ans dans des boites d'informatique et agences Web, je suis depuis peu freelance dans ce domaine.
-            <br/>Voici en quelques mots mon parcours professionnel.</p>
+          <p>Développeur pendant près de 10 ans dans des boites d'informatique et agences Web, voici en quelques mots mon parcours professionnel.</p>
         </div>
         <div className='flex flex-col md:flex-row justify-center items-stretch'>
           <div className='shadow-lg m-5 rounded-3xl rounded-tr-3xl bg-white'>
