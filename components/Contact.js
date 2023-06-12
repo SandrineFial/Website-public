@@ -6,9 +6,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPhone, faEnvelope, faLocationDot } from '@fortawesome/free-solid-svg-icons';
 import emailjs from '@emailjs/browser';
 
-const MAIL_REACT_APP_TEMPLATE_ID="template_mail_website";
-const MAIL_REACT_APP_SERVICE_ID="website_react-contact";
-const MAIL_REACT_APP_PUBLIC_KEY="apFfcvXqsGlvOjOSD";
+const MAIL_REACT_APP_TEMPLATE_ID=process.env.REACT_APP_TEMPLATE_ID;
+const MAIL_REACT_APP_SERVICE_ID=process.env.REACT_APP_SERVICE_ID;
+const MAIL_REACT_APP_PUBLIC_KEY=process.env.REACT_APP_PUBLIC_KEY;
 
 export default function Contact() {
   const form = useRef();
@@ -74,7 +74,7 @@ export default function Contact() {
               </div>
               <div className='flex flex-row justify-start items-center p-2'>
                 <div className='text-xl w-9 h-9 bg-sky-200 rounded-full p-2 mr-2'><FontAwesomeIcon icon={ faEnvelope}/></div>
-                <div>Email : fialon.sandrine_at_gmail.com</div>
+                <div>Email : fial.sand_at_gmail.com</div>
               </div>
               <div className='flex flex-row justify-start items-center p-2'>
                 <div className='text-xl w-8 h-8 bg-sky-200 rounded-full p-2 mr-2'><FontAwesomeIcon icon={ faLocationDot }/></div>
