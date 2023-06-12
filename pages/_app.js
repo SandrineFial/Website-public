@@ -9,7 +9,7 @@ import ReactGA from "react-ga4";
 function App({ Component, pageProps }) {
   
   if (typeof window !== "undefined") {
-    const TRACKING_ID = "G-WPZ58PNGBF"; //"351786095"; //  // OUR_TRACKING_ID
+    const TRACKING_ID = "G-WP...";
     ReactGA.initialize(TRACKING_ID);
     const splitLocation = window.location.pathname;
     ReactGA.send({
